@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS新闻阅读器</title>
+    <link rel="stylesheet" href="/src/assets/styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- 头部导航 -->
+        <header class="header">
+            <h1>RSS新闻阅读器</h1>
+            <button id="addFeedBtn" class="btn">添加RSS源</button>
+        </header>
+
+        <!-- 主要内容区 -->
+        <main class="main-content">
+            <!-- 左侧RSS源列表 -->
+            <aside class="feed-list">
+                <h2>订阅源</h2>
+                <ul id="feedsList"></ul>
+            </aside>
+
+            <!-- 右侧新闻列表 -->
+            <section class="news-list">
+                <h2>新闻列表</h2>
+                <div id="newsList"></div>
+            </section>
+        </main>
+
+        <!-- 添加RSS源的弹窗 -->
+        <div id="addFeedModal" class="modal">
+            <div class="modal-content">
+                <h2>添加RSS源</h2>
+                <form id="addFeedForm">
+                    <input type="text" id="feedUrl" placeholder="输入RSS源URL" required>
+                    <input type="text" id="feedName" placeholder="输入源名称" required>
+                    <div class="modal-buttons">
+                        <button type="submit" class="btn">添加</button>
+                        <button type="button" class="btn" id="cancelBtn">取消</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html> 
